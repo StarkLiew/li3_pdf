@@ -28,24 +28,27 @@ wkhtmltopdf relies on a binary executable that renders the HTML using the
 
 The bin `wkhtmltopdf` should be in the current path.
 
+
+
 ##Configuration
 
 {{{
 use li3_pdf\extensions\Pdf;
 
-Pdf::config('default', array(
+Pdf::config(array('default'=> array(
 	'adapter' => 'Wkhtmltopdf',
 	// options
 	'command' => 'C:\wkhtmltopdf\wkhtmltopdf.exe',
 	'page_size' => 'A5',
 	'orientation' => 'Landscape',
-));
+)));
 
-Pdf::config('default', array(
+
+Pdf::config(array('default'=>array(
 	'adapter' => 'Dompdf',
 	// options
 	'orientation' => 'landscape'
-));
+)));
 }}}
 
 ##Usage
